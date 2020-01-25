@@ -3,11 +3,11 @@
 
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.example.devops</groupId>
-  <artifactId>capstone</artifactId>
+  <groupId>com.example.maven-project</groupId>
+  <artifactId>maven-project</artifactId>
   <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>capstone</name>
+  <name>Maven Project</name>
   <description>Sample Maven project with a working, deployable site.</description>
   <url>http://www.example.com</url>
 
@@ -22,12 +22,12 @@
   </modules>
 
   <distributionManagement>
-    <snapshotRepository>
-        <id>snapshots</id>
-        <name>TG-Capstone-snapshots</name>
-        <url>http://192.168.0.101:8081/artifactory/libs-snapshot</url>
-    </snapshotRepository>
-</distributionManagement>
+    <site>
+      <id>site-server</id>
+      <name>Test Project Site</name>
+      <url>file:///tmp/maven-project-site</url>
+    </site>
+  </distributionManagement>
 
   <build>
     <plugins>
@@ -214,7 +214,7 @@
   </scm>
 
   <prerequisites>
-    <maven>3.6.3</maven>
+    <maven>3.0.3</maven>
   </prerequisites>
 
 </project>
